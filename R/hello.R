@@ -1,3 +1,7 @@
 library(RcppArmadillo)
+library(Rcpp)
 library(Matrix)
 x = rsparsematrix(10, 10, .05)
+str(x)
+sourceCpp("src/test.cpp")
+print_matrix_cpp(x)
